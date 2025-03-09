@@ -46,7 +46,7 @@ __file_name__ - Name of the file to process
 }
 ```
 
-### /export_text/{file_name} (GET)
+### /export_text (GET)
 #### Parameters
 __file_name__ - Name of the file to retrieve
 
@@ -65,7 +65,7 @@ __file_name__ - Name of the file to download
 #### Response
 - Returns the requested text file for download
 
-### /get_content/{file_name} (GET)
+### /get_content (GET)
 #### Parameters
 Empty
 
@@ -83,4 +83,3 @@ Empty
 
 ## ENVIRONMENT
 ### **Ensure to create an empty .env file in the repository before building the Docker image**
-
