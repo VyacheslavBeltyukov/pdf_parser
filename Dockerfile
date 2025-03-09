@@ -12,12 +12,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY .env /app/.env
 
 # Встановлення змінних середовища для шляхи моделей
-ENV MODELS=/app/materials/models
-ENV WORDS_DATABASES=/app/materials/words_databases
-ENV TRANSFORMER_NAME='sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2'
+ENV UPLOAD_DIR=/app/materials/pdf
+ENV RESULT_DIR=/app/materials/txt
 
 # Відкриття порту, на якому працюватиме FastAPI
-EXPOSE 8000
+EXPOSE 8080
 
 # Команда для запуску FastAPI за допомогою uvicorn
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
