@@ -9,7 +9,7 @@ docker build -t pdf_parser .
 
 ### DOCKER CONTAINER RUN
 ```
-docker run -it --name pdf_prsr -p 8000:8000 pdf_parser
+docker run -it --name pdf_prsr --restart unless-stopped -p 8080:8080 pdf_parser
 ```
 
 ### DOCKER IMAGE STARTING
